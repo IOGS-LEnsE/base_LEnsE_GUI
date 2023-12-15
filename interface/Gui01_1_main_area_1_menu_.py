@@ -62,7 +62,9 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.main_widget)
         
         # Main Area
-        self.main_area = QWidget()
+        self.main_area = SimpleWidget(title='Main Area', 
+                    background_color='white',
+                    text_color='red')
 
         # Left Main Menu
         self.main_menu = SimpleWidget(title='Left Menu')
