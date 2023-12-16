@@ -3,18 +3,30 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Base LEnsE GUI's documentation!
-==========================================
+Welcome to Base LEnsE GUI's documentation !
+===========================================
+
+.. caution::
+   This application and its documentation website are still works in progress
+
+
+Base LEnsE GUI is a complete tutorial 
+
+
+
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Different examples of GUI
+   
+	GUI1 Example : 1 left area, 1 main area, no event<contents/gui1>
+	GUI2 Example : 1 left area, 4 main areas, no event<contents/gui2>
+	GUI3 Example : 1 left area, 1 main area, button and signal events<contents/gui3>
+	GUI4 Example : 1 left area, 4 main areas, button and signal events<contents/gui3>
+   
 
 
+About the LEnsE
+---------------
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+This is a test.

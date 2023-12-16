@@ -1,3 +1,1 @@
-# Basic Graphical User Interface for LEnsE Application
-
-Based on PyQt6.
+# Basic Graphical User Interface for LEnsE ApplicationBased on PyQt6.## About the LEnsE## About Basic Graphical User Interface- __Gui1__ is composed of one left area (typically a menu) and one main area (typically main display of the application). There is no interaction implemented in this GUI.- __Gui2__ is composed of one left area (typically a menu) and one main area (typically main display of the application) separated in four subdivisions as an array of 2 by 2. There is no interaction implemented in this GUI.
