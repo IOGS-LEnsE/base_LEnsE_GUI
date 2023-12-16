@@ -20,8 +20,6 @@ sys.path.insert(0, os.path.abspath('../../interface'))
 project = 'Base LEnsE GUI - LEnsE / IOGS'
 copyright = '2023, Julien Villemejane'
 author = 'Julien Villemejane'
-
-# The full version, including alpha/beta/rc tags
 release = '0.1'
 
 
