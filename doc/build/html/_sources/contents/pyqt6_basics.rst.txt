@@ -1,3 +1,5 @@
+.. _pyqt6-basics-page:
+
 PyQt6 Basics
 ============
 
@@ -9,8 +11,10 @@ In this part, we will :
 - list the main graphical objects that are useful for simple GUI,
 - discover how events are processed
 
-Containers and contents
------------------------
+Containers, contents and layouts
+--------------------------------
+
+
 
 
 

@@ -46,11 +46,13 @@ class MainWindow(QMainWindow):
         Initialisation of the main Window.
         """
         super().__init__()
+        
         # Define Window title
         self.setWindowTitle("LEnsE - Window Title")
         self.setWindowIcon(QIcon('images/IOGS-LEnsE-logo.jpg'))
         self.setGeometry(50, 50, 1000, 700)
 
+        '''
         # Main Layout
         self.main_widget = QWidget()
         self.main_layout = QGridLayout()
@@ -72,7 +74,7 @@ class MainWindow(QMainWindow):
         # Include graphical elements in the window application
         self.main_layout.addWidget(self.main_menu, 0, 0)
         self.main_layout.addWidget(self.main_area, 0, 1)
-
+        '''
 
 # -------------------------------
 

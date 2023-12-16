@@ -45,11 +45,20 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Different examples of GUI</span></p>
-<ul class="current">
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="pyqt6.html">     PyQt6 installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pyqt6_basics.html">     PyQt6 basics principle</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">     GUI1 Example : 1 left area, 1 main area, no event</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">     GUI1 Example : 1 left area, 1 main area, no event</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mainwindow-and-main-function">MainWindow and main function</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creation-of-a-main-window">Creation of a main window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creation-of-the-main-function">Creation of the main function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#title-icon-and-size-of-the-application">Title, icon and size of the application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-graphical-container-and-object">First graphical container and object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#separated-classes-for-containers">Separated classes for containers</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -79,8 +88,87 @@
   <section id="gui1-example">
 <h1>GUI1 Example<a class="headerlink" href="#gui1-example" title="Permalink to this heading"></a></h1>
 <p>In this first example of GUI, we will learn the basics of the development of a graphical interface, based on PyQt6.</p>
-<p>At the end of this example, you will be able to</p>
-<img alt="Gui1 Example View" class="align-center" src="../_images/gui1_view.png" />
+<p>At the end of this example, you will be able to create this skeleton of graphical application.</p>
+<a class="reference internal image-reference" href="../_images/gui1_view.png"><img alt="Gui1 Example View" class="align-center" src="../_images/gui1_view.png" style="width: 434.0px; height: 317.5px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The complete file <code class="file docutils literal notranslate"><span class="pre">Gui01.py</span></code> of this example is in the <code class="file docutils literal notranslate"><span class="pre">interface/</span></code> directory.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="mainwindow-and-main-function">
+<h2>MainWindow and main function<a class="headerlink" href="#mainwindow-and-main-function" title="Permalink to this heading"></a></h2>
+<p>As mentionned in the <a class="reference internal" href="pyqt6_basics.html#pyqt6-basics-page"><span class="std std-ref">PyQt6 Basics</span></a> page, graphical applications with Qt are based on containers and contents to include as graphical objects.</p>
+<p>The main container of a window application is a <strong>QMainWindow</strong> object from Qt.</p>
+<p><em>It could also be a</em> <code class="code docutils literal notranslate"><span class="pre">QWidget</span></code> <em>object, but this case will not be processed in this tutorial.</em></p>
+<section id="creation-of-a-main-window">
+<h3>Creation of a main window<a class="headerlink" href="#creation-of-a-main-window" title="Permalink to this heading"></a></h3>
+<p>To create the main block of your final application, you have to develop a class inherited from the <strong>QMainWindow</strong> object of the <em>QtWidgets</em> sub-library of the <strong>PyQt6</strong> API.</p>
+<p>Copy this few lines in a <code class="file docutils literal notranslate"><span class="pre">*.py</span></code> file (<code class="file docutils literal notranslate"><span class="pre">my_app.py</span></code> for example).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QMainWindow</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+<span class="linenos">4</span>      <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">5</span>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To initialize this graphical main window, the initialization function of the mother class (<strong>QMainWindow</strong> class) is called.</p>
+<p>This example code does not produce a windowed application because no <code class="code docutils literal notranslate"><span class="pre">MainWindow</span></code> object is instantiated.</p>
+</section>
+<section id="creation-of-the-main-function">
+<h3>Creation of the main function<a class="headerlink" href="#creation-of-the-main-function" title="Permalink to this heading"></a></h3>
+<p>To vizualize the result of the previous code, the main function has to instantiate a <code class="code docutils literal notranslate"><span class="pre">MainWindow</span></code> object and to execute the application, via the <strong>QApplication</strong> class.</p>
+<p>Complete the previous <code class="file docutils literal notranslate"><span class="pre">my_app.py</span></code> file by these new lines.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">4</span>      <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+<span class="linenos">5</span>      <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
+<span class="linenos">6</span>      <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="linenos">7</span>      <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The execution of this code give the previous showed in the next figure.</p>
+<img alt="Gui1 - Main Window Application" class="align-center" src="../_images/gui1_step_1.png" />
+</section>
+</section>
+<section id="title-icon-and-size-of-the-application">
+<h2>Title, icon and size of the application<a class="headerlink" href="#title-icon-and-size-of-the-application" title="Permalink to this heading"></a></h2>
+<p>Applications often have title and mostly icon that appear in the title bar (the top bar of the application window).</p>
+<p>In the <code class="code docutils literal notranslate"><span class="pre">__init__</span></code> function of the <strong>MainWindow</strong> class, you can :</p>
+<ul class="simple">
+<li><p>specify a title by the <code class="code docutils literal notranslate"><span class="pre">setWindowTitle</span></code> method of the <strong>QMainWindow</strong> class,</p></li>
+<li><p>add an icon to your application via a <strong>QIcon</strong> object from the <em>QtGui</em> sub-library of the <strong>PyQt6</strong> API and the <code class="code docutils literal notranslate"><span class="pre">setWindowIcon</span></code> method of the <strong>QMainWindow</strong> class</p></li>
+</ul>
+<p>You can also specify the size and the position of your windowed application by using the <code class="code docutils literal notranslate"><span class="pre">setGeometry</span></code> method of the <strong>QMainWindow</strong> class. This method takes 4 parameters :</p>
+<ul class="simple">
+<li><p>x position of the top-left corner of your application (horizontal position),</p></li>
+<li><p>y position of the top-left corner of your application (vertical position),</p></li>
+<li><p>width of the window (horizontal size),</p></li>
+<li><p>height of the window (vertical size)</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">PyQt6.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+<span class="linenos"> 4</span>      <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 5</span>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>    <span class="c1"># Define Window title</span>
+<span class="linenos"> 8</span>    <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;LEnsE - Window Title&quot;</span><span class="p">)</span>
+<span class="linenos"> 9</span>    <span class="bp">self</span><span class="o">.</span><span class="n">setWindowIcon</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s1">&#39;images/IOGS-LEnsE-logo.jpg&#39;</span><span class="p">))</span>
+<span class="linenos">10</span>    <span class="bp">self</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">700</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="first-graphical-container-and-object">
+<h2>First graphical container and object<a class="headerlink" href="#first-graphical-container-and-object" title="Permalink to this heading"></a></h2>
+<p>To add</p>
+</section>
+<section id="separated-classes-for-containers">
+<h2>Separated classes for containers<a class="headerlink" href="#separated-classes-for-containers" title="Permalink to this heading"></a></h2>
+<p>In order to not overload the code and to make the debugging process easier, you can create a specific class for each main part of your application, especially for containers. All the containers of your main application will inherite from the <code class="code docutils literal notranslate"><span class="pre">QWidget</span></code> class.</p>
+</section>
 </section>
 
 
