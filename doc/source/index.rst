@@ -13,9 +13,11 @@ Welcome to Base LEnsE GUI's documentation !
 **Base LEnsE GUI** is a complete tutorial to develop a **graphical user interface** based on **PyQt6** in Python.
 
 
+GUI Tutorials
+-------------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Different examples of GUI
    
 	PyQt6 installation<contents/pyqt6>
 	PyQt6 basics principle<contents/pyqt6_basics>
