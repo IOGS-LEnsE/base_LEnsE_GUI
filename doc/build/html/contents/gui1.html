@@ -22,6 +22,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GUI2 Example" href="gui2.html" />
     <link rel="prev" title="PyQt6 Basics" href="pyqt6_basics.html" /> 
 </head>
 
@@ -54,11 +55,27 @@
 <li class="toctree-l3"><a class="reference internal" href="#creation-of-the-main-function">Creation of the main function</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#title-icon-and-size-of-the-application">Title, icon and size of the application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#first-graphical-container-and-object">First graphical container and object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#separated-classes-for-containers">Separated classes for containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#title-icon-and-size-of-the-application">Title, icon and size of the application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#about-oriented-object-programming">About oriented object programming</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#first-graphical-container-and-object">First graphical container and object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-window-central-container">Main window central container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#layout-of-the-window">Layout of the window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#first-label">First label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#css-decorations-and-alignment">CSS decorations and alignment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#separated-classes-for-containers">Separated classes for containers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simple-widget-class">Simple_Widget class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#main-application">Main application</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gui2.html">     GUI2 Example : 1 left area, 4 main areas, no event</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui3.html">     GUI3 Example : 1 left area, 1 main area, button and signal events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gui3.html">     GUI4 Example : 1 left area, 4 main areas, button and signal events</a></li>
 </ul>
 
         </div>
@@ -109,7 +126,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QMainWindow</span>
 <span class="linenos">2</span>
 <span class="linenos">3</span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
-<span class="linenos">4</span>      <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">4</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">5</span>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -123,10 +140,10 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span>
 <span class="linenos">2</span>
 <span class="linenos">3</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<span class="linenos">4</span>      <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
-<span class="linenos">5</span>      <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
-<span class="linenos">6</span>      <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="linenos">7</span>      <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">())</span>
+<span class="linenos">4</span>  <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+<span class="linenos">5</span>  <span class="n">window</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
+<span class="linenos">6</span>  <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="linenos">7</span>  <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>The execution of this code give the previous showed in the next figure.</p>
@@ -151,7 +168,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">PyQt6.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
-<span class="linenos"> 4</span>      <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 4</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos"> 5</span>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 <span class="linenos"> 6</span>
 <span class="linenos"> 7</span>    <span class="c1"># Define Window title</span>
@@ -160,14 +177,136 @@
 <span class="linenos">10</span>    <span class="bp">self</span><span class="o">.</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">700</span><span class="p">)</span>
 </pre></div>
 </div>
+<section id="about-oriented-object-programming">
+<h3>About oriented object programming<a class="headerlink" href="#about-oriented-object-programming" title="Permalink to this heading"></a></h3>
+<p>In the previous example, all the methods used to improve the graphical interface (set a title or an icon…) refered to an object called <strong>self</strong>.</p>
+<p>This object refered to the instantiation of itself, meaning that you want to perform actions contained in the different methods on the object itself.</p>
+<p>In the next sections, you will see that it’s also possible to create specific attribute to an object by adding the term <strong>self</strong> behind the name of the attribute. For example, <code class="code docutils literal notranslate"><span class="pre">self.title</span></code> corresponds to the attribute called <em>title</em> of the object. Each instantiation of an object where this attribute is initialized has its own <em>title</em>.</p>
+<p>All the internal methods of a class can access to this specific attribute by using <code class="code docutils literal notranslate"><span class="pre">self.title</span></code>.</p>
+</section>
 </section>
 <section id="first-graphical-container-and-object">
 <h2>First graphical container and object<a class="headerlink" href="#first-graphical-container-and-object" title="Permalink to this heading"></a></h2>
-<p>To add</p>
+<p>The <strong>QMainWindow</strong> object is a container that can receive other graphical containers or objects.</p>
+<p>Especially, it’s possible to add a graphical container (a <strong>QWidget</strong> object for example) in its central area.</p>
+<section id="main-window-central-container">
+<h3>Main window central container<a class="headerlink" href="#main-window-central-container" title="Permalink to this heading"></a></h3>
+<p>In the <code class="code docutils literal notranslate"><span class="pre">__init__</span></code> function of the <strong>MainWindow</strong> class, you can create a <strong>QWidget</strong> object, called <em>main_widget</em>. This widget is then set as the central widget of the <strong>QMainWindow</strong> object.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QWidget</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+<span class="linenos"> 4</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 5</span>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<span class="linenos"> 6</span>        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>    <span class="c1"># Main Layout</span>
+<span class="linenos"> 9</span>    <span class="bp">self</span><span class="o">.</span><span class="n">main_widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="linenos">10</span>    <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">main_widget</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you run the <code class="file docutils literal notranslate"><span class="pre">*.py</span></code> file, nothing really changed before the previous test. The main issue is that the background color by default of a <strong>QWidget</strong> object is the same as the background color of the window itself.</p>
+<p>You can change the background by adding this line in the <code class="code docutils literal notranslate"><span class="pre">__init__</span></code> function of the <strong>MainWindow</strong> class : <code class="code docutils literal notranslate"><span class="pre">self.main_widget.setStyleSheet(&quot;background-color:</span> <span class="pre">red;&quot;)</span></code>.</p>
+</section>
+<section id="layout-of-the-window">
+<h3>Layout of the window<a class="headerlink" href="#layout-of-the-window" title="Permalink to this heading"></a></h3>
+<p>Before adding graphical objects (as labels or buttons…), you need to specify to the container that will receive those objects how to place them in relation to each other. This behavior is setup by specific objects called <strong>layouts</strong>.</p>
+<p>There are different types of layout in Qt. The main ones are :</p>
+<ul class="simple">
+<li><p>vertical layout (<strong>QVBoxLayout</strong>) that lines up widgets vertically</p></li>
+<li><p>horizontal layout (<strong>QHBoxLayout</strong>) that lines up widgets horizontally</p></li>
+<li><p>grid layout (<strong>QGridLayout</strong>) that lays out widgets in a grid</p></li>
+</ul>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/gui1_step_2_layout.png"><img alt="Gui1 - Vertical Layout" src="../_images/gui1_step_2_layout.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-text">Vertical, Horizontal and Grid layout examples.</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>To set a specific layout to a widget, you can use the <code class="code docutils literal notranslate"><span class="pre">setLayout</span></code> method of the <strong>QWidget</strong> class.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QVBoxLayout</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+<span class="linenos"> 4</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 5</span>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<span class="linenos"> 6</span>        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>    <span class="c1"># Main Layout</span>
+<span class="linenos"> 9</span>    <span class="bp">self</span><span class="o">.</span><span class="n">main_widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<span class="linenos">10</span>        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span>        <span class="bp">self</span><span class="o">.</span><span class="n">main_widget_layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+<span class="linenos">13</span>        <span class="bp">self</span><span class="o">.</span><span class="n">main_widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">main_widget_layout</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="first-label">
+<h3>First label<a class="headerlink" href="#first-label" title="Permalink to this heading"></a></h3>
+<p>We can now include graphical objects in our windowed application !</p>
+<p>The first graphical object we can try is the <strong>QLabel</strong> object that allows to write text. After instantiated a <strong>QLabel</strong> object, we have to add it to an existing layout by the <code class="code docutils literal notranslate"><span class="pre">addWidget</span></code> method of the layout class.</p>
+<p>In the case of a <strong>QVBoxLayout</strong> or a <strong>QHBoxLayout</strong> layout, the graphical object is positionned to the next vertical or horizontal place in the layout. In the case of a <strong>QGridLayout</strong> layout, you also need to specify the horizontal line and the vertical row where you want to place the graphical object (<em>see example in the next section</em>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">PyQt6.QtWidgets</span> <span class="kn">import</span> <span class="n">QLabel</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+<span class="linenos">4</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">5</span>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<span class="linenos">6</span>        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="linenos">7</span>        <span class="bp">self</span><span class="o">.</span><span class="n">title_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;Test title&#39;</span><span class="p">)</span>
+<span class="linenos">8</span>        <span class="bp">self</span><span class="o">.</span><span class="n">main_widget_layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">title_label</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/gui1_step_3.png"><img alt="Gui1 - First label in our window" class="align-center" src="../_images/gui1_step_3.png" style="width: 230.39999999999998px; height: 178.79999999999998px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>We can add a second area of text in our vertical layout.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+<span class="linenos">2</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">3</span>        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="linenos">4</span>    <span class="bp">self</span><span class="o">.</span><span class="n">title_label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;Test Title 1&#39;</span><span class="p">)</span>
+<span class="linenos">5</span>    <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">title_label</span><span class="p">)</span>
+<span class="linenos">6</span>    <span class="bp">self</span><span class="o">.</span><span class="n">title_label2</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s1">&#39;Test Title 2&#39;</span><span class="p">)</span>
+<span class="linenos">7</span>    <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">title_label2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here is the result :</p>
+<a class="reference internal image-reference" href="../_images/gui1_step_3b.png"><img alt="Gui1 - First label in our window" class="align-center" src="../_images/gui1_step_3b.png" style="width: 229.2px; height: 177.6px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="css-decorations-and-alignment">
+<h3>CSS decorations and alignment<a class="headerlink" href="#css-decorations-and-alignment" title="Permalink to this heading"></a></h3>
+<p>Qt graphical elements are mostly based on <strong>HTML and CSS rendering</strong>. It’s possible to add CSS properties to lots of Qt objects as <strong>QLabel</strong> by using the <code class="code docutils literal notranslate"><span class="pre">setStyleSheet</span></code> method of the graphical object class.</p>
+<p>You can also align text and objects by using the <code class="code docutils literal notranslate"><span class="pre">setAlignment</span></code> method of the graphical object class. This method is based on Qt.AlignmentFlag objects contained in the <em>QtCore</em> sub-library of <strong>PyQt6</strong>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">PyQt6.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="k">class</span> <span class="nc">MainWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+<span class="linenos">4</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">5</span>    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="linenos">6</span>
+<span class="linenos">7</span>        <span class="bp">self</span><span class="o">.</span><span class="n">title_label</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s2">&quot;background-color: blue; border-radius: 10px; color:white; font-size:30px;&quot;</span><span class="p">)</span>
+<span class="linenos">8</span>    <span class="bp">self</span><span class="o">.</span><span class="n">title_label</span><span class="o">.</span><span class="n">setAlignment</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">AlignmentFlag</span><span class="o">.</span><span class="n">AlignCenter</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The result of the code above is given in the next figure.</p>
+<a class="reference internal image-reference" href="../_images/gui1_step_3c.png"><img alt="Gui1 - First label in our window" class="align-center" src="../_images/gui1_step_3c.png" style="width: 229.79999999999998px; height: 178.79999999999998px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
 </section>
 <section id="separated-classes-for-containers">
 <h2>Separated classes for containers<a class="headerlink" href="#separated-classes-for-containers" title="Permalink to this heading"></a></h2>
 <p>In order to not overload the code and to make the debugging process easier, you can create a specific class for each main part of your application, especially for containers. All the containers of your main application will inherite from the <code class="code docutils literal notranslate"><span class="pre">QWidget</span></code> class.</p>
+<section id="simple-widget-class">
+<h3>Simple_Widget class<a class="headerlink" href="#simple-widget-class" title="Permalink to this heading"></a></h3>
+</section>
+<section id="main-application">
+<h3>Main application<a class="headerlink" href="#main-application" title="Permalink to this heading"></a></h3>
+</section>
 </section>
 </section>
 
@@ -176,6 +315,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="pyqt6_basics.html" class="btn btn-neutral float-left" title="PyQt6 Basics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gui2.html" class="btn btn-neutral float-right" title="GUI2 Example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

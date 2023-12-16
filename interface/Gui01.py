@@ -50,11 +50,11 @@ class MainWindow(QMainWindow):
         # Define Window title
         self.setWindowTitle("LEnsE - Window Title")
         self.setWindowIcon(QIcon('images/IOGS-LEnsE-logo.jpg'))
-        self.setGeometry(50, 50, 1000, 700)
-
-        '''
-        # Main Layout
+        self.setGeometry(50, 50, 500, 400)
+        # Main Widget
         self.main_widget = QWidget()
+
+        # Main Layout
         self.main_layout = QGridLayout()
         # Left area of size 1 / 5 of the width
         self.main_layout.setColumnStretch(0, 1)
@@ -74,7 +74,7 @@ class MainWindow(QMainWindow):
         # Include graphical elements in the window application
         self.main_layout.addWidget(self.main_menu, 0, 0)
         self.main_layout.addWidget(self.main_area, 0, 1)
-        '''
+
 
 # -------------------------------
 
