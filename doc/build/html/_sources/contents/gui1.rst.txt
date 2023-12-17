@@ -270,8 +270,15 @@ Separated classes for containers
 In order to not overload the code and to make the debugging process easier, you can create a specific class for each main part of your application, especially for containers. All the containers of your main application will inherite from the :code:`QWidget` class.
 
 
-Simple_Widget class
-~~~~~~~~~~~~~~~~~~~
+SimpleWidget class
+~~~~~~~~~~~~~~~~~~
+
+.. seealso::
+
+   .. py:class:: SimpleWidget()
+      :noindex:
+
+	  Documentation of the <elements/SimpleWidget> module.
 
 
 Main application

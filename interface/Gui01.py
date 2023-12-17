@@ -28,7 +28,7 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QGridLayout, QWidget
 from PyQt6.QtGui import QIcon
 from PyQt6.QtCore import QTimer
 
-from elements.Simple_Widget import SimpleWidget
+from elements.SimpleWidget import SimpleWidget
 
 
 # -------------------------------
