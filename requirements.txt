@@ -6,14 +6,3 @@ scipy
 matplotlib
 PyQt6
 
-
-# To build documentation
-sphinx
-sphinx_rtd_theme
-sphinx-design
-sphinx-copybutton
-sphinx-automodapi
-sphinx-favicon
-sphinx-autoapi
-sphinx-copybutton
-sphinx-automodapi
