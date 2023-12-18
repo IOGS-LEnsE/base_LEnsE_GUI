@@ -29,7 +29,6 @@ jobs:
       - name: Deploy documentation
         uses: peaceiris/actions-gh-pages@v3
         with:
-          publish_branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _build/
           force_orphan: true
