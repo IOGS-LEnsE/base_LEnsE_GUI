@@ -12,6 +12,8 @@ Welcome to Base LEnsE GUI's documentation !
 
 **Base LEnsE GUI** is a complete tutorial to develop a **graphical user interface** based on **PyQt6** in Python.
 
+The GitHub repository of this project : <https://github.com/IOGS-LEnsE/base_LEnsE_GUI>
+
 
 GUI Tutorials
 -------------
