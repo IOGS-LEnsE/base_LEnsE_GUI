@@ -24,7 +24,7 @@ jobs:
 
       - name: Build documentation
         run: |
-          sphinx-build -M html docs/ _html/
+          sphinx-build -M html docs/src/ _html/
 
       - name: Deploy documentation
         uses: peaceiris/actions-gh-pages@v3
