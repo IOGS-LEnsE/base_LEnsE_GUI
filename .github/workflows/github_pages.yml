@@ -38,4 +38,4 @@ jobs:
         git add .
         git commit -m "Deploy Sphinx documentation to GitHub Pages"
         git remote add origin "https://${{ secrets.DEPLOY_TOKEN }}@github.com/${{ github.repository }}.git"
-        git push --force origin main
+        git push --force origin master:gh-pages
