@@ -1,0 +1,22 @@
+.wy-menu-vertical p.caption{
+	color: #0A3250;
+}
+
+.wy-side-nav-search{
+	color: #0A3250;
+	background-color: white;
+}
+.wy-side-nav-search>a{
+	color: #0A3250;
+}
+	
+
+h2{
+	color: #ff960a;
+}
+
+h3{
+	color: #0A3250;
+	font-size: 110%;
+	padding-left: 20px;
+}
