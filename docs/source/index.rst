@@ -9,6 +9,8 @@ Welcome to Base LEnsE GUI's documentation !
 .. caution::
    This application and its documentation website are still works in progress
 
+.. note::
+   Sphinx Documentation
 
 **Base LEnsE GUI** is a complete tutorial to develop a **graphical user interface** based on **PyQt6** in Python.
 
