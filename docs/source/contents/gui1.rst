@@ -269,6 +269,11 @@ Separated classes for containers
 
 In order to not overload the code and to make the debugging process easier, you can create a specific class for each main part of your application, especially for containers. All the containers of your main application will inherite from the :code:`QWidget` class.
 
+.. toctree::
+   :maxdepth: 2
+   
+   elements/simpleWidget
+
 
 SimpleWidget class
 ~~~~~~~~~~~~~~~~~~
