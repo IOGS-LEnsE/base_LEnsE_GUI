@@ -25,7 +25,8 @@ GUI Tutorials
 	PyQt6 basics principle<contents/pyqt6_basics>
 	GUI1 Example : 1 left area, 1 main area, no event<contents/gui1>
 	GUI2 Example : 1 left area, 4 main areas, no event<contents/gui2>
-	GUI3 Example : 1 left area, 1 main area, button and signal events<contents/gui3>
+	GUI3 Example : button and events in a simple widget<contents/gui3>
+	GUI4 Example : button, signals and events between widget<contents/gui4>
    
 
 
