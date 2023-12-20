@@ -267,16 +267,56 @@ The result of the code above is given in the next figure.
 Separated classes for containers
 --------------------------------
 
-In order to not overload the code and to make the debugging process easier, you can create a specific class for each main part of your application, especially for containers. All the containers of your main application will inherite from the :code:`QWidget` class.
+In order to not overload the code and to make the debugging process easier, you can create a specific class for each main part of your application, especially for containers. All the containers of your main application inherite from the :code:`QWidget` class.
+
+
+SimpleWidget class
+~~~~~~~~~~~~~~~~~~
+
+In the next exemple, a :code:`SimpleWidget` class was defined in a file called :file:`SimpleWidget.py` stored in the directory called :file:`elements` of the :file:`interface` directory (where the :file:`Gui1.py` is stored).
+
+You can find the documentation of this :code:`SimpleWidget` class by following this link :
 
 .. toctree::
    :maxdepth: 1
    
    elements/simpleWidget
+   
+This class inherites from the :code:`QWidget` class, a container of Qt application. In the initialization function of this new class, the constructor (:code:`__init__` function) of the mother class is called (mother class is the :code:`QWidget` class).
+
+.. code-block:: python
+  :linenos:
+  
+  class SimpleWidget(QWidget):
+    def __init__(self, title='', background_color='#0A3250', text_color='#FFFFFF'):
+      """
+      Initialisation of the widget.
+      """
+      super().__init__(parent=None)
+
+Few parameters permit to customize the rendering of the graphical object : a title - a text displays in the main area of the widget, the background color and the color of the text. These three parameters are optionnal, and the default value are mentionned in the :code:`__init__` function parameters.
+
+.. code-block:: python
+  :linenos:
+  
+  class SimpleWidget(QWidget):
+    def __init__(...):
+      [...]
+	  self.title = title
+      self.background_color = background_color
+      self.text_color = text_color
+	  
+These parameters are attributes of the class (:code:`self`). They could be changed independently for each instance of a :code:`SimpleWidget` object.
+
+Layout of the SimpleWidget class
+""""""""""""""""""""""""""""""""
+
+Test
+
+Graphical objects of the SimpleWidget class
+"""""""""""""""""""""""""""""""""""""""""""
 
 
-SimpleWidget class
-~~~~~~~~~~~~~~~~~~
 
 .. seealso::
 

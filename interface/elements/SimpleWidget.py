@@ -18,17 +18,9 @@ Authors
 
 
 # Graphical interface
-from PyQt6.QtWidgets import (
-    QApplication, QMainWindow, QWidget, QLabel, QPushButton, QGridLayout, QComboBox, QSlider, QLineEdit
-    )
-from PyQt6.QtGui import QPixmap, QImage
-from pyqtgraph import PlotWidget, plot, mkPen
+from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QPushButton, QGridLayout
+from PyQt6.QtCore import Qt
 
-
-from PyQt6.QtWidgets import QMainWindow, QLabel, QComboBox, QWidget, QGroupBox
-from PyQt6.QtCore import QTimer, Qt
-
-#-----------------------------------------------------------------------------------------------
 
 class SimpleWidget(QWidget):
     """
@@ -39,7 +31,7 @@ class SimpleWidget(QWidget):
 
     def __init__(self, title='', background_color='#0A3250', text_color='#FFFFFF'):
         """
-        Initialisation of our camera widget.
+        Initialisation of the widget.
         """
         super().__init__(parent=None)
         self.title = title
