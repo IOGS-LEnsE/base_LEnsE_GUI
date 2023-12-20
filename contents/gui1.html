@@ -7,7 +7,7 @@
   <title>GUI1 Example &mdash; Base LEnsE GUI - LEnsE / IOGS 0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/lense.css?v=4012dcb7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/lense.css?v=03a6ceff" />
 
   
   <!--[if lt IE 9]>
@@ -67,8 +67,12 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#separated-classes-for-containers">Separated classes for containers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="elements/simpleWidget.html">SimpleWidget Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#simplewidget-class">SimpleWidget class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simplewidget-class">SimpleWidget class</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="elements/simpleWidget.html">SimpleWidget Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#layout-of-the-simplewidget-class">Layout of the SimpleWidget class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#graphical-objects-of-the-simplewidget-class">Graphical objects of the SimpleWidget class</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#main-application">Main application</a></li>
 </ul>
 </li>
@@ -301,14 +305,41 @@
 </section>
 <section id="separated-classes-for-containers">
 <h2>Separated classes for containers<a class="headerlink" href="#separated-classes-for-containers" title="Link to this heading"></a></h2>
-<p>In order to not overload the code and to make the debugging process easier, you can create a specific class for each main part of your application, especially for containers. All the containers of your main application will inherite from the <code class="code docutils literal notranslate"><span class="pre">QWidget</span></code> class.</p>
+<p>In order to not overload the code and to make the debugging process easier, you can create a specific class for each main part of your application, especially for containers. All the containers of your main application inherite from the <code class="code docutils literal notranslate"><span class="pre">QWidget</span></code> class.</p>
+<section id="simplewidget-class">
+<h3>SimpleWidget class<a class="headerlink" href="#simplewidget-class" title="Link to this heading"></a></h3>
+<p>In the next exemple, a <code class="code docutils literal notranslate"><span class="pre">SimpleWidget</span></code> class was defined in a file called <code class="file docutils literal notranslate"><span class="pre">SimpleWidget.py</span></code> stored in the directory called <code class="file docutils literal notranslate"><span class="pre">elements</span></code> of the <code class="file docutils literal notranslate"><span class="pre">interface</span></code> directory (where the <code class="file docutils literal notranslate"><span class="pre">Gui1.py</span></code> is stored).</p>
+<p>You can find the documentation of this <code class="code docutils literal notranslate"><span class="pre">SimpleWidget</span></code> class by following this link :</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="elements/simpleWidget.html">SimpleWidget Example</a></li>
 </ul>
 </div>
-<section id="simplewidget-class">
-<h3>SimpleWidget class<a class="headerlink" href="#simplewidget-class" title="Link to this heading"></a></h3>
+<p>This class inherites from the <code class="code docutils literal notranslate"><span class="pre">QWidget</span></code> class, a container of Qt application. In the initialization function of this new class, the constructor (<code class="code docutils literal notranslate"><span class="pre">__init__</span></code> function) of the mother class is called (mother class is the <code class="code docutils literal notranslate"><span class="pre">QWidget</span></code> class).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">class</span> <span class="nc">SimpleWidget</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+<span class="linenos">2</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">background_color</span><span class="o">=</span><span class="s1">&#39;#0A3250&#39;</span><span class="p">,</span> <span class="n">text_color</span><span class="o">=</span><span class="s1">&#39;#FFFFFF&#39;</span><span class="p">):</span>
+<span class="linenos">3</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">4</span><span class="sd">    Initialisation of the widget.</span>
+<span class="linenos">5</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos">6</span>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Few parameters permit to customize the rendering of the graphical object : a title - a text displays in the main area of the widget, the background color and the color of the text. These three parameters are optionnal, and the default value are mentionned in the <code class="code docutils literal notranslate"><span class="pre">__init__</span></code> function parameters.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">class</span> <span class="nc">SimpleWidget</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+<span class="linenos">2</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+<span class="linenos">3</span>    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="linenos">4</span>        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+<span class="linenos">5</span>    <span class="bp">self</span><span class="o">.</span><span class="n">background_color</span> <span class="o">=</span> <span class="n">background_color</span>
+<span class="linenos">6</span>    <span class="bp">self</span><span class="o">.</span><span class="n">text_color</span> <span class="o">=</span> <span class="n">text_color</span>
+</pre></div>
+</div>
+<p>These parameters are attributes of the class (<code class="code docutils literal notranslate"><span class="pre">self</span></code>). They could be changed independently for each instance of a <code class="code docutils literal notranslate"><span class="pre">SimpleWidget</span></code> object.</p>
+<section id="layout-of-the-simplewidget-class">
+<h4>Layout of the SimpleWidget class<a class="headerlink" href="#layout-of-the-simplewidget-class" title="Link to this heading"></a></h4>
+<p>Test</p>
+</section>
+<section id="graphical-objects-of-the-simplewidget-class">
+<h4>Graphical objects of the SimpleWidget class<a class="headerlink" href="#graphical-objects-of-the-simplewidget-class" title="Link to this heading"></a></h4>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="py class">
@@ -320,6 +351,7 @@
 </dd></dl>
 
 </div>
+</section>
 </section>
 <section id="main-application">
 <h3>Main application<a class="headerlink" href="#main-application" title="Link to this heading"></a></h3>
