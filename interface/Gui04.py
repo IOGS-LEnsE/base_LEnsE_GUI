@@ -3,9 +3,8 @@
 
 This GUI is developped in Python 3 and is based on 
 PyQt6 for graphical objects.
-It divided in :
-- 1 main area (QWidget)
-- 1 left menu (QWidget)
+
+This example shows how to use events on buttons to update labels between two different widgets.
 
 ---------------------------------------
 (c) 2023 - LEnsE - Institut d'Optique
@@ -27,7 +26,7 @@ import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow, QGridLayout, QWidget
 from PyQt6.QtGui import QIcon
 
-from elements.SimpleWidget import SimpleWidget
+from elements.SignalWidget import SignalWidget
 
 
 # -------------------------------
@@ -63,17 +62,22 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.main_widget)
         
         # Main Area
-        self.main_area = SimpleWidget(title='Main Area', 
-                    background_color='white',
-                    text_color='red')
+        self.main_area = SignalWidget(title='Main Area')
 
         # Left Main Menu
-        self.main_menu = SimpleWidget(title='Left Menu')
+        self.main_menu = SignalWidget(title='Left Menu')
+        self.main_menu.my_signal.connect(self.action_menu)
 
         # Include graphical elements in the window application
         self.main_layout.addWidget(self.main_menu, 0, 0)
         self.main_layout.addWidget(self.main_area, 0, 1)
 
+
+    def action_menu(self, event):
+        """
+        Processes main menu events.
+        """
+        self.main_area.update_title('New Area')
 
 # -------------------------------
 
