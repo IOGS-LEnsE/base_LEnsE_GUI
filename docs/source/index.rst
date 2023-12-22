@@ -20,14 +20,28 @@ GUI Tutorials
 
 .. toctree::
    :maxdepth: 1
+   :caption: PyQt6
    
 	PyQt6 installation<contents/pyqt6>
 	PyQt6 basics principle<contents/pyqt6_basics>
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Graphical objects
+
 	GUI1 Example : 1 left area, 1 main area, no event<contents/gui1>
 	GUI2 Example : 1 left area, 4 main areas, no event<contents/gui2>
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Events and signals
+
 	GUI3 Example : button and events in a simple widget<contents/gui3>
 	GUI4 Example : button, signals and events between widget<contents/gui4>
-   
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Serial interface GUI
 
 
 About the LEnsE
