@@ -78,6 +78,7 @@ class MainWindow(QMainWindow):
         Processes main menu events.
         """
         self.main_area.update_title('New Area')
+        print('ok')
 
 # -------------------------------
 

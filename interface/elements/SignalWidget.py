@@ -30,15 +30,15 @@ class SignalWidget(QWidget):
     """
     my_signal = pyqtSignal(int)
 
-    def __init__(self, title='', background_color='#0A3250', text_color='#FFFFFF'):
+    def __init__(self, title='', background_color='#FFFFFF', text_color='#000000'):
         """
         Initialisation of the widget.
         
         :param title: Title of the widget displays in a label, defaults to ''
         :type title: str, optional
-        :param background_color: Color of the widget background, defaults to #0A3250
+        :param background_color: Color of the widget background, defaults to #FFFFFF
         :type background_color: str, optional
-        :param text_color: Color of the widget text, defaults to #FFFFFF
+        :param text_color: Color of the widget text, defaults to #000000
         :type text_color: str, optional
         """
         super().__init__(parent=None)
@@ -98,7 +98,7 @@ if __name__ == '__main__':
             self.setGeometry(50, 50, 1000, 700)    
                     
             # Widget to test
-            self.main_area = SignalWidget(title='Main Area', 
+            self.main_area = SignalWidget(title='Main Area',
                         background_color='white',
                         text_color='red')
             self.setCentralWidget(self.main_area)
