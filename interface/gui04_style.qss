@@ -1,0 +1,15 @@
+QWidget{
+	border-radius: 10px;
+    border-color: black; 
+	border-width: 2px; 
+	font: bold 12px; 
+	padding: 20px;
+    border-style: solid;
+}
+
+QPushButton {
+	border-radius: 0px;
+	border-width: 0px;
+	font: 12px; 
+    padding: 0px;
+}

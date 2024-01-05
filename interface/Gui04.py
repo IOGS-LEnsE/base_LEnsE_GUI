@@ -67,6 +67,7 @@ class MainWindow(QMainWindow):
         # Left Main Menu
         self.main_menu = SignalWidget(title='Left Menu')
         self.main_menu.my_signal.connect(self.action_menu)
+        self.main_area.my_signal.connect(self.action_main)
 
         # Include graphical elements in the window application
         self.main_layout.addWidget(self.main_menu, 0, 0)
@@ -78,7 +79,20 @@ class MainWindow(QMainWindow):
         Processes main menu events.
         """
         self.main_area.update_title('New Area')
-        print('ok')
+        style_css = "background-color: black;"
+        style_css += "color: white;"
+        self.main_area.title_label.setStyleSheet(style_css)
+        print('menu action')
+
+
+    def action_main(self, event):
+        """
+        Processes main area events.
+        """
+        style_css = "background-color: white;"
+        style_css += "color: black;"
+        self.main_area.title_label.setStyleSheet(style_css)
+        print('main action')
 
 # -------------------------------
 
@@ -88,5 +102,10 @@ if __name__ == "__main__":
 
     window = MainWindow()
     window.show()
+
+    # CSS Style
+    with open("gui04_style.qss", "r") as f:
+        _style = f.read()
+        app.setStyleSheet(_style)
 
     sys.exit(app.exec())
